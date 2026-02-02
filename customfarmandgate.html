@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Farm and Gate | Custom Fabrication in Citronelle, Alabama</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #2c2c2c;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1a4d2e 0%, #2d5a3d 100%);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .phone {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #ffd700;
+            text-decoration: none;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .phone:hover {
+            color: #ffed4e;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%234a7c59" width="1200" height="600"/><path fill="%233d6b4a" d="M0 300L50 320L100 310L150 330L200 315L250 335L300 320L350 340L400 325L450 345L500 330L550 350L600 335L650 355L700 340L750 360L800 345L850 365L900 350L950 370L1000 355L1050 375L1100 360L1150 380L1200 365V600H0Z"/></svg>') center/cover;
+            color: white;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+
+        .experience-badge {
+            display: inline-block;
+            background: #8b0000;
+            color: white;
+            padding: 1rem 2rem;
+            font-size: 1.8rem;
+            font-weight: bold;
+            border-radius: 8px;
+            margin-top: 1rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section {
+            padding: 4rem 2rem;
+        }
+
+        .section:nth-child(even) {
+            background: #f5f5f0;
+        }
+
+        h3 {
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+            color: #1a4d2e;
+            text-align: center;
+            border-bottom: 3px solid #8b0000;
+            padding-bottom: 0.5rem;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border-left: 5px solid #1a4d2e;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+        }
+
+        .service-card h4 {
+            color: #1a4d2e;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #8b0000 0%, #a52a2a 100%);
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        .cta-section h3 {
+            color: white;
+            border-bottom: 3px solid #ffd700;
+            margin-bottom: 2rem;
+        }
+
+        .cta-section p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #ffd700;
+            color: #8b0000;
+            padding: 1.2rem 3rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+
+        .cta-button:hover {
+            background: #ffed4e;
+            transform: scale(1.05);
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .feature {
+            text-align: center;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: #1a4d2e;
+            margin-bottom: 1rem;
+        }
+
+        .feature h4 {
+            color: #1a4d2e;
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            background: #2c2c2c;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .location {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .phone {
+                font-size: 1.4rem;
+            }
+
+            .header-content {
+                text-align: center;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Custom Farm and Gate</h1>
+            <a href="tel:251-485-5686" class="phone">📞 251-485-5686</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Quality Farm Equipment & Gate Fabrication</h2>
+            <p>Serving Citronelle, Alabama and Beyond</p>
+            <div class="experience-badge">25+ Years of Trusted Craftsmanship</div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h3>Our Services</h3>
+            <div class="services">
+                <div class="service-card">
+                    <h4>Custom Farm Gates</h4>
+                    <p>Built to last with Southern durability. Whether you need a simple entrance gate or a full cattle gate system, we fabricate to your exact specifications.</p>
+                </div>
+                <div class="service-card">
+                    <h4>Farm Equipment</h4>
+                    <p>Custom-built equipment designed for the working farm. From hay feeders to livestock equipment, we build what you need for your operation.</p>
+                </div>
+                <div class="service-card">
+                    <h4>Metal Fabrication</h4>
+                    <p>Expert welding and metalwork for any agricultural need. We work with you to create solutions that make your farm work better.</p>
+                </div>
+                <div class="service-card">
+                    <h4>Repairs & Modifications</h4>
+                    <p>Don't replace it—let us fix it. We repair and modify existing equipment to extend its life and improve its function.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h3>Why Choose Custom Farm and Gate?</h3>
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">🛠️</div>
+                    <h4>25+ Years Experience</h4>
+                    <p>A quarter century of quality craftsmanship</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🚚</div>
+                    <h4>Local Installation</h4>
+                    <p>We install locally in the Citronelle area</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📦</div>
+                    <h4>National Shipping</h4>
+                    <p>Quality farm equipment delivered anywhere</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🤝</div>
+                    <h4>Custom Solutions</h4>
+                    <p>Every piece built to your specifications</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h3>Ready to Get Started?</h3>
+            <p>Call us today for a free quote on your custom farm equipment or gate project.</p>
+            <p>We'll discuss your needs and provide honest, straightforward pricing.</p>
+            <a href="tel:251-485-5686" class="cta-button">Call Now: 251-485-5686</a>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h3>About Our Work</h3>
+            <p style="font-size: 1.2rem; text-align: center; max-width: 800px; margin: 0 auto; line-height: 1.8;">
+                For over 25 years, Custom Farm and Gate has been serving farmers and landowners throughout Alabama and beyond. 
+                We understand the demands of farm life because we're part of the same community. Every gate we build, every piece 
+                of equipment we fabricate is made with the same care and quality we'd demand for our own land. We take pride in 
+                old-fashioned craftsmanship, honest service, and work that stands the test of time.
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="location">
+            <strong>Custom Farm and Gate</strong><br>
+            Citronelle, Alabama<br>
+            Serving Local and National Customers
+        </div>
+        <p>&copy; 2025 Custom Farm and Gate. All rights reserved.</p>
+    </footer>
+</body>
+</html>
