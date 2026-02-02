@@ -29,10 +29,21 @@
             margin: 0 auto;
             padding: 0 2rem;
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
+            justify-content: center;
             align-items: center;
-            flex-wrap: wrap;
             gap: 1rem;
+        }
+
+        .logo-container {
+            max-width: 400px;
+        }
+
+        .logo {
+            width: 100%;
+            height: auto;
+            max-height: 250px;
+            object-fit: contain;
         }
 
         h1 {
@@ -217,6 +228,14 @@
         }
 
         @media (max-width: 768px) {
+            .logo-container {
+                max-width: 250px;
+            }
+
+            .logo {
+                max-height: 100px;
+            }
+
             h1 {
                 font-size: 1.8rem;
             }
@@ -239,7 +258,9 @@
 <body>
     <header>
         <div class="header-content">
-            <h1>Custom Farm and Gate</h1>
+            <div class="logo-container">
+                <img src="logo.png" alt="Custom Farm and Gate" class="logo">
+            </div>
             <a href="tel:251-485-5686" class="phone">📞 251-485-5686</a>
         </div>
     </header>
@@ -247,7 +268,7 @@
     <section class="hero">
         <div class="container">
             <h2>Quality Farm Equipment & Gate Fabrication</h2>
-            <p>Built in Alabama, Shipped Nationwide</p>
+            <p>Serving the Gulf Coast, Southern United States, and beyond.</p>
             <div class="experience-badge">25+ Years of Trusted Craftsmanship</div>
         </div>
     </section>
@@ -287,8 +308,8 @@
                 </div>
                 <div class="feature">
                     <div class="feature-icon">🚚</div>
-                    <h4>Gulf Coast Delivery</h4>
-                    <p>Local delivery & installation along the Gulf Coast</p>
+                    <h4>Local Installation</h4>
+                    <p>We install locally in the Gulf Coast area</p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon">📦</div>
@@ -317,12 +338,10 @@
         <div class="container">
             <h3>About Our Work</h3>
             <p style="font-size: 1.2rem; text-align: center; max-width: 800px; margin: 0 auto; line-height: 1.8;">
-                With over 25 years of metal fabrication and construction experience, Custom Farm and Gate has serves farmers and landowners throughout the nation. 
-                Based in Citronelle, Alabama, we ship our custom-fabricated equipment anywhere in the country, with 
-                delivery and installation available along the Gulf Coast. We understand the demands of farm life, and 
-                every gate we build and every piece of equipment we fabricate is made with the same care and quality 
-                we'd demand for our own land. We take pride in old-fashioned craftsmanship, honest service, and work 
-                that stands the test of time.
+                With over 25 years of fabrication experience, Custom Farm and Gate serves farmers and landowners throughout Alabama and beyond. 
+                We understand the demands of farm life because we're part of the same community. Every gate we build, every piece 
+                of equipment we fabricate is made with the same care and quality we'd demand for our own land. We take pride in 
+                old-fashioned craftsmanship, honest service, and work that stands the test of time.
             </p>
         </div>
     </section>
@@ -331,7 +350,7 @@
         <div class="location">
             <strong>Custom Farm and Gate</strong><br>
             Citronelle, Alabama<br>
-            National Shipping | Gulf Coast Delivery & Installation Available
+            Serving Local and National Customers
         </div>
         <p>&copy; 2025 Custom Farm and Gate. All rights reserved.</p>
     </footer>
